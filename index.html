@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="air-datepicker/air-datepicker.css" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" href="/img/browser-logo.png" type="image/png">
+    <title>Travellian</title>
+</head>
+<body class="body">
+<div class="container">
+    <header class="header">
+        <div class="logo">
+            <svg class="logo__icon"><use xlink:href="img/icons.svg#logo"></use></svg>
+            <svg class="logo__name"><use xlink:href="img/icons.svg#logo-text"></use></svg>
+        </div>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#main-block" class="menu__link menu__link_active">Home</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#destinations" class="menu__link">Explore</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#offers" class="menu__link">Pricing</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#blog" class="menu__link">Blog</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#trips" class="menu__link">Travel</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#destination-gallery" class="menu__link">Gallery</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#experiences" class="menu__link">Experiences</a>
+                </li>
+            </ul>
+        </nav>
+<!--        <div class="menu-buttons">-->
+<!--            <button class="button button__login">Login</button>-->
+<!--            <button class="button button__signup">Sign up</button>-->
+<!--        </div>-->
+
+<!--        Мобильное меню    -->
+        <button class="button burger-menu" aria-label="Toggle menu"></button>
+        <nav class="mobile-menu">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a href="#main-block" class="menu__link mobile-menu__link">Home</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#destinations" class="menu__link mobile-menu__link">Explore</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#offers" class="menu__link mobile-menu__link">Pricing</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#blog" class="menu__link mobile-menu__link">Blog</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#trips" class="menu__link mobile-menu__link">Travel</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#destination-gallery" class="menu__link mobile-menu__link">Gallery</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#experiences" class="menu__link mobile-menu__link">Experiences</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section main-block" id="main-block">
+            <div class="title main-block__title">Start your unforgettable<br>journey with us.</div>
+            <h3 class="subtitle main-block__subtitle">The best travel for your jouney begins now</h3>
+            <form class="form main-block__form" name="booking-details" method="post">
+                <div class="search-wrapper">
+                    <label class="input-wrapper">
+                        <span  class="input-wrapper__name">Destination</span>
+                        <input class="input input-search main-block__input" type="text" placeholder="Type..." name="destination">
+                    </label>
+                    <ul class="results">
+                    </ul>
+                </div>
+                <div class="input-wrapper">
+                    <span class="input-wrapper__name">Person</span>
+                    <div class="custom-select">
+                        <input class="input main-block__input custom-select__field" placeholder="Choose" readonly name="person-num">
+                        <svg class="chevron-down">
+                            <use xlink:href="img/icons.svg#chevron-down"></use>
+                        </svg>
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item">1</li>
+                            <li class="custom-select__item">2</li>
+                            <li class="custom-select__item">3</li>
+                            <li class="custom-select__item">4</li>
+                            <li class="custom-select__item">5</li>
+                            <li class="custom-select__item">6</li>
+                            <li class="custom-select__item">7</li>
+                            <li class="custom-select__item">8</li>
+                            <li class="custom-select__item">9</li>
+                            <li class="custom-select__item">more than 10</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <label class="input-wrapper">
+                    <span class="input-wrapper__name">Check in</span>
+                    <input class="calendar input" placeholder="Type..." name="check-in">
+                    <svg class="chevron-down">
+                        <use xlink:href="img/icons.svg#chevron-down"></use>
+                    </svg>
+                </label>
+
+                <label class="input-wrapper">
+                    <span class="input-wrapper__name">Check out</span>
+                    <input class="calendar input" placeholder="Type..." name="check-out">
+                    <svg class="chevron-down">
+                        <use xlink:href="img/icons.svg#chevron-down"></use>
+                    </svg>
+                </label>
+
+                <button class="button main-button form__button main-block__button">
+                    Book Now
+                    <svg class="button__img">
+                        <use xlink:href="img/icons.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </form>
+            <img class="main-block__img main-block__img_1 show" src="img/main-block-bg.webp" alt="bg-img">
+            <img class="main-block__img main-block__img_2" src="img/destinations-img1.webp" alt="bg-img">
+            <img class="main-block__img main-block__img_3" src="img/destinations-img2.webp" alt="bg-img">
+
+
+        </section>
+        <section class="section destinations" id="destinations">
+            <h2 class="title destinations__title">Popular Destinations</h2>
+            <div class="subtitle destinations__subtitle">
+                Most popular destinations around the world, from historical places to natural wonders.
+            </div>
+
+            <div class="gallery destinations__gallery" data-setting="setup1">
+                <div class="gallery__buttons destinations__buttons">
+                    <span class="button gallery__button gallery__button_left">
+                        <svg>
+                            <use xlink:href="img/icons.svg#slide-left"></use>
+                        </svg>
+                    </span>
+                    <span class="button gallery__button gallery__button_right">
+                        <svg>
+                            <use xlink:href="img/icons.svg#slide-right"></use>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="gallery__list">
+                    <div class="gallery__wrapper destinations__wrapper">
+                        <div class="gallery__item destinations__card">
+                            <picture class="destinations__img">
+                                <source type="image/webp" srcset="img/destinations-img1.webp">
+                                <source type="image/jpeg" srcset="img/destinations-img1.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destinations-img1.jpeg" alt="destination-gallery-img">
+                            </picture>
+                            <div class="gallery__title destinations__name">Monument of Berlin</div>
+                            <div class="destinations__location">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#location"></use>
+                                </svg>
+                                Berlin, Germany
+                            </div>
+                        </div>
+                        <div class="gallery__item destinations__card">
+                            <picture class="destinations__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img2.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img2.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img2.jpeg" alt="destination-gallery-img">
+                            </picture>
+                            <div class="gallery__title destinations__name">Millennium Bridge</div>
+                            <div class="destinations__location">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#location"></use>
+                                </svg>
+                                London, United Kingdom
+                            </div>
+                        </div>
+                        <div class="gallery__item destinations__card">
+                            <picture class="destinations__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img3.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img3.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img3.jpeg" alt="destination-gallery-img">
+                            </picture>
+                            <div class="gallery__title destinations__name">Rialto Bridge</div>
+                            <div class="destinations__location">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#location"></use>
+                                </svg>
+                                Venice, Italy
+                            </div>
+                        </div>
+                        <div class="gallery__item destinations__card">
+                            <picture class="destinations__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img4.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img4.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img4.jpeg" alt="destination-gallery-img">
+                            </picture>
+                            <div class="gallery__title destinations__name">Sea of Orange Tiles</div>
+                            <div class="destinations__location">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#location"></use>
+                                </svg>
+                                Lisbon, Portugal
+                            </div>
+                        </div>
+                        <div class="gallery__item destinations__card">
+                            <picture class="destinations__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img1.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img1.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img1.jpeg" alt="destination-gallery-img">
+                            </picture>
+                            <div class="gallery__title destinations__name">Monument of Berlin</div>
+                            <div class="destinations__location">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#location"></use>
+                                </svg>
+                                Berlin, Germany
+                            </div>
+                        </div>
+                        <div class="gallery__item destinations__card">
+                            <picture class="destinations__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img2.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img2.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img2.jpeg" alt="destination-gallery-img">
+                            </picture>
+                            <div class="gallery__title destinations__name" >Millennium Bridge</div>
+                            <div class="destinations__location">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#location"></use>
+                                </svg>
+                                London, United Kingdom
+                            </div>
+                        </div>
+                        <div class="gallery__item destinations__card">
+                            <picture class="destinations__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img3.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img3.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img3.jpeg" alt="destination-gallery-img">
+                            </picture>
+                            <div class="gallery__title destinations__name">Rialto Bridge</div>
+                            <div class="destinations__location">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#location"></use>
+                                </svg>
+                                Venice, Italy
+                            </div>
+                        </div>
+                        <div class="gallery__item destinations__card">
+                            <picture class="destinations__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img4.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img4.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img4.jpeg" alt="destination-gallery-img">
+                            </picture>
+                            <div class="gallery__title destinations__name">Sea of Orange Tiles</div>
+                            <div class="destinations__location">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#location"></use>
+                                </svg>
+                                Lisbon, Portugal
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section offers" id="offers">
+            <h2 class="title offers__title">Special Offer</h2>
+            <div class="subtitle offers__subtitle">
+                Check out our special offer and discounts
+            </div>
+
+            <div class="gallery offers__gallery">
+                <div class="gallery__buttons offers__buttons">
+                    <button class="button gallery__button gallery__button_left" aria-label="Gallery button left">
+                        <svg height="10" width="20">
+                            <use xlink:href="img/icons.svg#slide-left"></use>
+                        </svg>
+                    </button>
+                    <button class="button gallery__button gallery__button_right" aria-label="Gallery button right">
+                        <svg height="10" width="20">
+                            <use xlink:href="img/icons.svg#slide-right"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="gallery__list">
+                    <div class="gallery__wrapper">
+                        <div class="gallery__item card">
+                            <picture class="offers__img">
+                                <source type="image/webp" srcset="img/offers-img1.webp">
+                                <source type="image/jpeg" srcset="img/offers-img1.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/offers-img1.jpeg" alt="offers-img">
+                            </picture>
+                            <div class="gallery__title card__title">Lisbon, Portugal</div>
+                            <div class="stars card__stars">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <p class="card__description">
+                                5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during
+                                the renaissance. Passage and going through the cites of the world in classical literature.
+                            </p>
+                            <div class="card__price">
+                                From <span>€500</span>
+                            </div>
+                            <a href="#" class="link main-button offers__button">Details</a>
+                        </div>
+                        <div class="gallery__item card">
+                            <picture class="offers__img">
+                                <source type="image/webp" srcset="img/offers-img2.webp">
+                                <source type="image/jpeg" srcset="img/offers-img2.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/offers-img2.jpeg" alt="offers-img">
+                            </picture>
+                            <div class="gallery__title card__title">Athens, Greece</div>
+                            <div class="stars card__stars">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <p class="card__description">
+                                5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during
+                                the renaissance. Passage and going through the cites of the world in classical literature.
+                            </p>
+                            <div class="card__price">
+                                From <span>€800</span>
+                            </div>
+                            <a href="#" class="link main-button offers__button">Details</a>
+                        </div>
+                        <div class="gallery__item card">
+                            <picture class="offers__img">
+                                <source type="image/webp" srcset="img/offers-img3.webp">
+                                <source type="image/jpeg" srcset="img/offers-img3.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/offers-img3.jpeg" alt="offers-img">
+                            </picture>
+                            <div class="gallery__title card__title">Rome, Italy</div>
+                            <div class="stars card__stars">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <p class="card__description">
+                                5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during
+                                the renaissance. Passage and going through the cites of the world in classical literature.
+                            </p>
+                            <div class="card__price">
+                                From <span>€750</span>
+                            </div>
+                            <a href="#" class="link main-button offers__button">Details</a>
+
+                        </div>
+                        <div class="gallery__item card">
+                            <picture class="offers__img">
+                                <source type="image/webp" srcset="img/offers-img4.webp">
+                                <source type="image/jpeg" srcset="img/offers-img4.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/offers-img4.jpeg" alt="offers-img">
+                            </picture>
+                            <div class="gallery__title card__title">Paris, France</div>
+                            <div class="stars card__stars">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <p class="card__description">
+                                5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during
+                                the renaissance. Passage and going through the cites of the world in classical literature.
+                            </p>
+                            <div class="card__price">
+                                From <span>€500</span>
+                            </div>
+                            <a href="#" class="link main-button offers__button">Details</a>
+                        </div>
+                        <div class="gallery__item card">
+                            <picture class="offers__img">
+                                <source type="image/webp" srcset="img/offers-img5.webp">
+                                <source type="image/jpeg" srcset="img/offers-img5.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/offers-img5.jpeg" alt="offers-img">
+                            </picture>
+                            <div class="gallery__title card__title">Amsterdam, Netherlands</div>
+                            <div class="stars card__stars">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <p class="card__description">
+                                5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during
+                                the renaissance. Passage and going through the cites of the world in classical literature.
+                            </p>
+                            <div class="card__price">
+                                From <span>€800</span>
+                            </div>
+                            <a href="#" class="link main-button offers__button">Details</a>
+                        </div>
+                        <div class="gallery__item card">
+                            <picture class="offers__img">
+                                <source type="image/webp" srcset="img/offers-img6.webp">
+                                <source type="image/jpeg" srcset="img/offers-img6.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/offers-img6.jpeg" alt="offers-img">
+                            </picture>
+                            <div class="gallery__title card__title">Barcelona, Spain</div>
+                            <div class="stars card__stars">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <p class="card__description">
+                                5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during
+                                the renaissance. Passage and going through the cites of the world in classical literature.
+                            </p>
+                            <div class="card__price">
+                                From <span>€750</span>
+                            </div>
+                            <a href="#" class="link main-button offers__button">Details</a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section blog" id="blog">
+            <h2 class="title blog__title">Our Blog</h2>
+            <div class="subtitle blog__subtitle">
+                An insight the incredible experience in the world
+            </div>
+            <div class="post">
+                <picture class="blog__img">
+                    <source type="image/webp" srcset="img/blog-img.webp">
+                    <source type="image/jpeg" srcset="img/blog-img.jpeg">
+                    <img loading="lazy"
+                         decoding="async"
+                         src="img/blog-img.jpeg" alt="blog-img">
+                </picture>
+                <div class="post__info">
+                    <div class="post__name">Beautiful Italy <br>Let’s travel</div>
+                    <p class="post__description">
+                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                        was born and I will give you a complete account of the system and expound the actual teachings
+                        of the great explorer of the truth, the master- builder of human happiness. No one rejects,
+                        dislike, or avoids plasure itself, because it is pleasure, but because those who do not know
+                        how to pursue pleasure rationally encounter consequences that are extremly painful. Nor again
+                        is there anyone who loves or pursues.
+                    </p>
+                    <a href="" class="link post__link">
+                        Read More
+                        <svg height="24" width="24">
+                            <use xlink:href="img/icons.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="section trips" id="trips">
+            <div class="trips__main">
+                <h2 class="title trips__title">Trip Planners</h2>
+                <div class="subtitle trips__subtitle">
+                    20 years from now you will be more disappointed by the things that you didn’t do. Stop regretting
+                    and start travelling, start throwing off the bowlines.
+                </div>
+                <a href="" class="link main-button button-link  trips__button">View all trip plans</a>
+            </div>
+
+            <div class=" trips__gallery">
+                <div class="gallery__list trips__list">
+                    <div class="gallery__wrapper trips__wrapper">
+                        <div class="gallery__item trips__card">
+                            <picture class="trips__img">
+                                <source type="image/webp" srcset="img/trip-img1.webp">
+                                <source type="image/jpeg" srcset="img/trip-img1.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/trip-img1.jpeg" alt="trip-img">
+                            </picture>
+                            <div class="trips__info">
+                                <div class="trips__price">
+                                    <span>Guided Tour</span>
+                                    <span>€99/Day</span>
+                                </div>
+                                <div class="trips__city">Paris City Tour</div>
+                                <div class="trips__rating">
+                                    <div class="stars trips__stars">
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div>7 Days tour</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery__item trips__card">
+                            <picture class="trips__img">
+                                <source type="image/webp" srcset="img/trip-img2.webp">
+                                <source type="image/jpeg" srcset="img/trip-img2.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/trip-img2.jpeg" alt="trip-img">
+                            </picture>
+                            <div class="trips__info">
+                                <div class="trips__price">
+                                    <span>Guided Tour</span>
+                                    <span>€99/Day</span>
+                                </div>
+                                <div class="trips__city">Paris City Tour</div>
+                                <div class="trips__rating">
+                                    <div class="stars trips__stars">
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div>7 Days tour</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="gallery__item trips__card">
+                            <picture class="trips__img">
+                                <source type="image/webp" srcset="img/trip-img3.webp">
+                                <source type="image/jpeg" srcset="img/trip-img3.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/trip-img3.jpeg" alt="trip-img">
+                            </picture>
+                            <div class="trips__info">
+                                <div class="trips__price">
+                                    <span>Guided Tour</span>
+                                    <span>€99/Day</span>
+                                </div>
+                                <div class="trips__city">Paris City Tour</div>
+                                <div class="trips__rating">
+                                    <div class="stars trips__stars">
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div>7 Days tour</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="gallery__item trips__card">
+                            <picture class="trips__img">
+                                <source type="image/webp" srcset="img/trip-img4.webp">
+                                <source type="image/jpeg" srcset="img/trip-img4.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/trip-img4.jpeg" alt="trip-img">
+                            </picture>
+                            <div class="trips__info">
+                                <div class="trips__price">
+                                    <span>Guided Tour</span>
+                                    <span>€99/Day</span>
+                                </div>
+                                <div class="trips__city">Paris City Tour</div>
+                                <div class="trips__rating">
+                                    <div class="stars trips__stars">
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div>7 Days tour</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery__item trips__card">
+                            <picture class="trips__img">
+                                <source type="image/webp" srcset="img/trip-img1.webp">
+                                <source type="image/jpeg" srcset="img/trip-img1.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/trip-img1.jpeg" alt="trip-img">
+                            </picture>
+                            <div class="trips__info">
+                                <div class="trips__price">
+                                    <span>Guided Tour</span>
+                                    <span>€99/Day</span>
+                                </div>
+                                <div class="trips__city">Paris City Tour</div>
+                                <div class="trips__rating">
+                                    <div class="stars trips__stars">
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div>7 Days tour</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery__item trips__card">
+                            <picture class="trips__img">
+                                <source type="image/webp" srcset="img/trip-img2.webp">
+                                <source type="image/jpeg" srcset="img/trip-img2.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/trip-img2.jpeg" alt="trip-img">
+                            </picture>
+                            <div class="trips__info">
+                                <div class="trips__price">
+                                    <span>Guided Tour</span>
+                                    <span>€99/Day</span>
+                                </div>
+                                <div class="trips__city">Paris City Tour</div>
+                                <div class="trips__rating">
+                                    <div class="stars trips__stars">
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div>7 Days tour</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="gallery__item trips__card">
+                            <picture class="trips__img">
+                                <source type="image/webp" srcset="img/trip-img3.webp">
+                                <source type="image/jpeg" srcset="img/trip-img3.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/trip-img3.jpeg" alt="trip-img">
+                            </picture>
+                            <div class="trips__info">
+                                <div class="trips__price">
+                                    <span>Guided Tour</span>
+                                    <span>€99/Day</span>
+                                </div>
+                                <div class="trips__city">Paris City Tour</div>
+                                <div class="trips__rating">
+                                    <div class="stars trips__stars">
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                        <svg height="24" width="24">
+                                            <use xlink:href="img/icons.svg#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div>7 Days tour</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section destination-gallery" id="destination-gallery">
+            <h2 class="title destination-gallery__title">Destination Gallery</h2>
+            <div class="subtitle destination-gallery__subtitle">
+                Our photo gallery on trip
+            </div>
+            <div class="gallery destination-gallery__gallery">
+                <div class="gallery__buttons destination-gallery__button">
+                    <button class="button gallery__button gallery__button_left" aria-label="Gallery button left">
+                        <svg height="10" width="20">
+                            <use xlink:href="img/icons.svg#slide-left"></use>
+                        </svg>
+                    </button>
+                    <button class="button gallery__button gallery__button_right" aria-label="Gallery button right">
+                        <svg height="10" width="20">
+                            <use xlink:href="img/icons.svg#slide-right"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="gallery__list">
+                    <div class="gallery__wrapper destination-gallery__wrapper">
+                        <div class="gallery__item destination-gallery__card">
+                            <picture class="destination-gallery__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img1.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img1.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img1.jpeg" alt="blog-img">
+                            </picture>
+                        </div>
+                        <div class="gallery__item destination-gallery__card">
+                            <picture class="destination-gallery__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img2.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img2.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img2.jpeg" alt="blog-img">
+                            </picture>
+                        </div>
+                        <div class="gallery__item destination-gallery__card">
+                            <picture class="destination-gallery__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img3.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img3.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img3.jpeg" alt="blog-img">
+                            </picture>
+                        </div>
+                        <div class="gallery__item destination-gallery__card">
+                            <picture class="destination-gallery__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img4.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img4.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img4.jpeg" alt="blog-img">
+                            </picture>
+                        </div>
+                        <div class="gallery__item destination-gallery__card">
+                            <picture class="destination-gallery__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img1.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img1.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img1.jpeg" alt="blog-img">
+                            </picture>
+                        </div>
+                        <div class="gallery__item destination-gallery__card">
+                            <picture class="destination-gallery__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img2.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img2.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img2.jpeg" alt="blog-img">
+                            </picture>
+                        </div>
+                        <div class="gallery__item destination-gallery__card">
+                            <picture class="destination-gallery__img">
+                                <source type="image/webp" srcset="img/destination-gallery-img3.webp">
+                                <source type="image/jpeg" srcset="img/destination-gallery-img3.jpeg">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/destination-gallery-img3.jpeg" alt="blog-img">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section experiences" id="experiences">
+            <h2 class="title experiences__title">Traveler’s Experiences</h2>
+            <div class="subtitle experiences__subtitle">
+                Here some awesome feedback from our travelers
+            </div>
+            <div class="gallery experiences__gallery">
+                <div class="gallery__buttons experiences__buttons">
+                    <button class="button gallery__button gallery__button_left" aria-label="Gallery button left">
+                        <svg height="10" width="20">
+                            <use xlink:href="img/icons.svg#slide-left"></use>
+                        </svg>
+                    </button>
+                    <button class="button gallery__button gallery__button_right" aria-label="Gallery button right">
+                        <svg height="10" width="20">
+                            <use xlink:href="img/icons.svg#slide-right"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="gallery__list">
+                    <div class="gallery__wrapper experiences__wrapper">
+                        <div class="gallery__item experiences__card">
+                            <picture class="experiences__img">
+                                <source type="image/webp" srcset="img/avatar1.webp">
+                                <source type="image/png" srcset="img/avatar1.png">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/avatar1.png" alt="blog-img">
+                            </picture>
+                            <p class="experiences__description">
+                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising
+                                pain was born and I will give you a complete account of the system and expound the actual
+                                teachings of the great explorer of the truth, the master- builder of human happiness.
+                            </p>
+                            <div class="stars card__stars">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="experiences__name">John Doe</div>
+                                <div class="experiences__job">Accountant</div>
+                            </div>
+
+                        </div>
+                        <div class="gallery__item experiences__card">
+                            <picture class="experiences__img">
+                                <source type="image/webp" srcset="img/avatar2.webp">
+                                <source type="image/png" srcset="img/avatar2.png">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/avatar2.png" alt="blog-img">
+                            </picture>
+                            <p class="experiences__description">
+                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising
+                                pain was born and I will give you a complete account of the system and expound the actual
+                                teachings of the great explorer of the truth, the master- builder of human happiness.
+                            </p>
+                            <div class="stars card__stars">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="experiences__name">John Smith</div>
+                                <div class="experiences__job">Journalist, HWO News</div>
+                            </div>
+
+                        </div>
+                        <div class="gallery__item experiences__card">
+                            <picture class="experiences__img">
+                                <source type="image/webp" srcset="img/avatar3.webp">
+                                <source type="image/png" srcset="img/avatar3.png">
+                                <img loading="lazy"
+                                     decoding="async"
+                                     src="img/avatar3.png" alt="blog-img">
+                            </picture>
+                            <p class="experiences__description">
+                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising
+                                pain was born and I will give you a complete account of the system and expound the actual
+                                teachings of the great explorer of the truth, the master- builder of human happiness.
+                            </p>
+                            <div class="stars card__stars">
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                                <svg height="24" width="24">
+                                    <use xlink:href="img/icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="experiences__name">Tamara Bellis</div>
+                                <div class="experiences__job">Managing Director, JTH</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section newsletter" id="newsletter">
+            <h2 class="title newsletter__title">Our Newsletter</h2>
+            <form class="form newsletter__form" name="email" method="post">
+                <label class="input-wrapper newsletter__wrapper">
+                    <span  class="input-wrapper__name newsletter__name">Email</span>
+                    <input type="email" class="input newsletter__input" placeholder="Enter your email" name="email">
+                </label>
+
+                <button class="button main-button form__button newsletter__button">Subscribe</button>
+            </form>
+        </section>
+
+        <div class="offers-modal" id="modal">
+            <div class="offers-modal__wrapper">
+                <h3 class="offers-modal__title">Contact us for your <span>dream vacation!</span></h3>
+                <p class="offers-modal__text">Are you ready to embark on an unforgettable journey? Our travel experts
+                    are here to help you plan the perfect vacation tailored to your preferences. Please fill out the
+                    form below, and one of our agents will be in touch with you shortly.
+                </p>
+                <form class="offers-modal__form" name="contact">
+                    <label class="input-wrapper">
+                        <span  class="input-wrapper__name">Name *</span>
+                        <input class="input" type="text" placeholder="Please enter your full name" name="name" required>
+                    </label>
+
+                    <label class="input-wrapper">
+                        <span  class="input-wrapper__name">Email *</span>
+                        <input class="input" type="email" placeholder="Your preferred email address" name="name" required>
+                    </label>
+
+                    <label class="input-wrapper">
+                        <span  class="input-wrapper__name">Phone Number *</span>
+                        <input class="input" type="text" maxlength="12" placeholder="Your contact number, including the country code" name="name"  id="phone" required>
+                    </label>
+
+                    <div class="input-wrapper">
+                        <span class="input-wrapper__name">Preferred contact method</span>
+                        <div class="custom-select">
+                            <input class="input main-block__input custom-select__field" placeholder="Choose preferred contact method" readonly name="person-num">
+                            <svg class="chevron-down">
+                                <use xlink:href="img/icons.svg#chevron-down"></use>
+                            </svg>
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item">Email</li>
+                                <li class="custom-select__item">Phone</li>
+                                <li class="custom-select__item">WhatsApp</li>
+                                <li class="custom-select__item">Telegram</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="offers__button main-button offers-modal__submit" type="submit">Send</button>
+                </form>
+                <button class="offers-modal__close" type="button"></button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="logo footer__logo">
+            <svg class="logo__icon footer__icon"><use xlink:href="img/icons.svg#logo"></use></svg>
+            <svg class="logo__name footer__name"><use xlink:href="img/icons.svg#logo-text"></use></svg>
+            <span>Copyright © Travellian 2020 All rights reserved</span>
+        </div>
+        <nav class="footer__menu">
+            <span class="footer__category">Menu</span>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__links">Home</a></li>
+                <li class="footer__item"><a href="#" class="footer__links">Explore</a></li>
+                <li class="footer__item"><a href="#" class="footer__links">Travel</a></li>
+                <li class="footer__item"><a href="#" class="footer__links">Blog</a></li>
+                <li class="footer__item"><a href="#" class="footer__links">Pricing</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__menu">
+            <span class="footer__category">Information</span>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__links">Destinations</a></li>
+                <li class="footer__item"><a href="#" class="footer__links">Supports</a></li>
+                <li class="footer__item"><a href="#" class="footer__links">Terms & Conditions</a></li>
+                <li class="footer__item"><a href="#" class="footer__links">Privacy</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__menu">
+            <span class="footer__category">Contact Info</span>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__links">+123 456 789</a></li>
+                <li class="footer__item"><a href="#" class="footer__links">info@travellian.com</a></li>
+                <li class="footer__item"><a href="#" class="footer__links">1245, New Yourk, USA</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__menu">
+            <span class="footer__category">Follow us on</span>
+            <ul class="footer__list footer__list_row">
+                <li class="footer__item">
+                    <a href="#" class="footer__links">
+                        <svg height="32" width="32">
+                            <use xlink:href="img/icons.svg#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__links">
+                        <svg height="40" width="40">
+                            <use xlink:href="img/icons.svg#pinterest"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__links">
+                        <svg height="32" width="32">
+                            <use xlink:href="img/icons.svg#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__links">
+                        <svg height="32" width="32">
+                            <use xlink:href="img/icons.svg#twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <div class="user-achievements">
+        <div class="user-achievements-block"></div>
+        <div class="user-achievements-block"></div>
+        <div class="user-achievements-block"></div>
+        <div class="user-achievements-block"></div>
+        <div class="user-achievements-block"></div>
+        <div class="user-achievements-block"></div>
+        <div class="user-achievements-block"></div>
+        <div class="user-achievements-block"></div>
+    </div>
+
+
+</div>
+<script src="air-datepicker/air-datepicker.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
